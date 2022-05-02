@@ -1,7 +1,7 @@
 const EXCHANGE_RATE = 15
  const PRICE_CONFIGS = [
   { 
-    price: 10000,
+    price: 200* EXCHANGE_RATE,
     colors: {
       contentBg: 'rgba(255,23,70,1)',
       headerBg: 'rgba(208,0,0,1)',
