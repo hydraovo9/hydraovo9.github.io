@@ -74,7 +74,7 @@ const EXCHANGE_RATE = 15
       authorName: 'rgba(0,0,0,0.701961)',
       time: 'rgba(0,0,0,0.501961)',
       content: 'rgba(0,0,0,1)',
-      iconImg: 'https://cdn.discordapp.com/emojis/805591703879680001.png'
+      iconImg: 'https://cdn.discordapp.com/attachments/969045209608511498/970641281271365673/ainomori.png'
     },
     pinTime: 0
   },
