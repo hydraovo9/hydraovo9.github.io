@@ -9,7 +9,7 @@ const EXCHANGE_RATE = 15
       authorName: 'rgba(255,255,255,0.701961)',
       time: 'rgba(255,255,255,0.501961)',
       content: 'rgba(255,255,255,1)',
-      iconImg: 'https://i.imgur.com/fs7cLE5.gif'
+      iconImg: 'https://i.imgur.com/gpR0gyt.gif'
     },
     pinTime: 60
   },
@@ -35,7 +35,7 @@ const EXCHANGE_RATE = 15
       authorName: 'rgba(255,255,255,0.701961)',
       time: 'rgba(255,255,255,0.501961)',
       content: 'rgba(255,255,255,0.87451)',
-      iconImg: 'https://i.imgur.com/mAGHbEw.gif'
+      iconImg: 'https://i.imgur.com/6UvwPrA.gif'
     },
     pinTime: 10
   },
@@ -61,7 +61,7 @@ const EXCHANGE_RATE = 15
       authorName: 'rgba(0,0,0,0.541176)',
       time: 'rgba(0,0,0,0.501961)',
       content: 'rgba(0,0,0,1)',
-      iconImg: 'https://i.imgur.com/6obHqbt.gif'
+      iconImg: 'https://i.imgur.com/KIa6lol.gif'
     },
     pinTime: 2
   },
