@@ -1,0 +1,210 @@
+
+
+<title>贊助通知頁面 | 綠界科技ECPay</title>
+<meta name="referrer" content="no-referrer" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="https://payment.ecpay.com.tw/Content/themes/WebStyle201404/images/favicon.ico" />
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800,900" rel="stylesheet" />
+<link href="https://payment.ecpay.com.tw/Content/themes/broadcaster/css/TextAnimation.css" rel="stylesheet" type="text/css" />
+<script src="https://payment.ecpay.com.tw/Scripts/jquery-1.7.2.min.js" type="text/javascript"></script>
+<script src="https://payment.ecpay.com.tw/Scripts/soundmanager2-nodebug-jsmin.js" type="text/javascript"></script>
+<style type="text/css">
+    body
+    {
+        margin: 0;
+        overflow: hidden;
+    }
+    .highlight
+    {
+        color: #32C3A6;
+    }
+    #divAlert
+    {
+        text-shadow: 0px 0px 1px #000, 0px 0px 2px #000, 0px 0px 3px #000, 0px 0px 4px #000, 0px 0px 5px #000;
+    }
+    #divAlert, #wrap
+    {
+        height: 100%;
+        width: 100%;   
+    }
+    #divImage
+    {
+        height: 100%;
+        display: table-cell;
+        background-position: center bottom;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+</style>
+<script type="text/javascript">
+    var settings = { BgColor: "#00FF00", FontAnimate: "None", MsgTemplate: " 喔耶！{name} 提供建廟基金 {amount} 元！", AlertSound: "", AlertSec: 10, AlertStyle: 1,TTSStatus:0,TTSVolume:0,AlertSoundVolume:0};
+    var queue;
+    var queueDonateID;
+    var checkDonateInterval = 5000;
+    var doAlertInterval = 1000;
+    var clearQueueInterval = 600000;
+    var mainSound;
+    var isSoundPlaying;
+    $(function () {
+        if (window.name) {
+            $("body").css("background-color", settings.BgColor);
+        }   
+
+        if (settings.AlertSound.length == 0) {
+            setTimeout(checkDonate, 1000);
+            setTimeout(doAlert, 5000);
+        } else {
+            soundManager.setup({
+                onready: function() {
+                if (settings.AlertSound !="")
+                {
+                    mainSound = soundManager.createSound({
+                        url:settings.AlertSound,
+                        volume: settings.AlertSoundVolume
+                    });
+                }
+                    setTimeout(checkDonate, 1000);
+                    setTimeout(doAlert, 5000);
+                }
+            });  
+        }
+
+        setTimeout(clearQueueDonateID, clearQueueInterval);
+    });
+    function checkDonate() {
+        $.ajax({
+            type: "POST",
+            url: "https://tobarana-proxy.herokuapp.com/https://payment.ecpay.com.tw/Broadcaster/CheckDonate/DA0DDBDB963DAAB9E74D7E784774CC7F",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            cache: false,
+            success: function (resp) {                
+                if (queue) {
+                    for (var i = 0; i < resp.length; i++) {
+                        var exist = false;
+                        if(queueDonateID) {
+                            for (var j = 0; j < queueDonateID.length; j++) {
+                                if(queueDonateID[j] == resp[i].donateid) {
+                                    exist = true;
+                                    break;
+                                }
+                            }
+                        } else {
+                            queueDonateID = new Array();
+                        }
+
+                        if(!exist) {
+                            queue.push(resp[i]);
+                            queueDonateID.push(resp[i].donateid);
+                        }
+                    }
+                } else {
+                    queue = resp;
+
+                    if(!queueDonateID) {
+                        queueDonateID = new Array();
+                        for (var i = 0; i < queue.length; i++) {
+                            queueDonateID.push(queue[i].donateid);
+                        }
+                    } else {
+                        for (var i = 0; i < queue.length; i++) {
+                            for (var j = 0; j < queueDonateID.length; j++) {
+                                if(queueDonateID[j] == queue[i].donateid) {
+                                    queue.splice(i, 1);
+                                }
+                            }
+                        }
+                    }
+                }
+                setTimeout(checkDonate, checkDonateInterval);
+            }
+        });
+    }
+    function doAlert() {
+        if (queue.length > 0 && !isSoundPlaying) {
+            showAlert(queue[0]);
+        }
+        else {
+            setTimeout(doAlert, doAlertInterval);
+        }
+    }
+    function showAlert(data) {
+        var msgTemplate = settings.MsgTemplate;
+        var acc = getAnimatedLetter(data.name ? data.name : "");
+        var amount = getAnimatedLetter(data.amount);
+        var msg = data.msg ? data.msg : "";
+
+        var alertMsg = msgTemplate
+        alertMsg = alertMsg.replace("{name}", "<span class='highlight'>" + acc + "</span>");
+        alertMsg = alertMsg.replace("{amount}", "<span class='highlight'>" + amount + "</span>");
+
+        $("#divAlertMsg").html(alertMsg);
+        $("#divUserMsg").html(msg);
+
+        $("#divAlert").slideDown({
+            complete: function() {
+                soundManager.stopAll();
+                if (mainSound != null) {
+                    isSoundPlaying = true;
+                    mainSound.play({
+                        onfinish: function() {
+                            if (msg.length != 0 && settings.TTSStatus !=0) {
+                                soundManager.createSound({
+                                    url: "http://translate.google.com/translate_tts?ie=UTF-8&total=1&idx=0&textlen=" + msg.length + "&client=tw-ob&q=" + encodeURIComponent(msg) + "&tl=zh-TW",
+                                    volume: settings.TTSVolume
+                                }).play({
+                                    onfinish: function(){ isSoundPlaying = false; }
+                                });
+                            }
+                        }
+                    });
+                } else if (msg.length != 0 && settings.TTSStatus !=0) {
+                    isSoundPlaying = true;
+                    soundManager.createSound({
+                        url: "http://translate.google.com/translate_tts?ie=UTF-8&total=1&idx=0&textlen=" + msg.length + "&client=tw-ob&q=" + encodeURIComponent(msg) + "&tl=zh-TW",
+                        volume: settings.TTSVolume
+                    }).play({
+                        onfinish: function(){ isSoundPlaying = false; }
+                    });
+                }
+            }
+        }).delay(settings.AlertSec * 1000)
+        .slideUp({
+            complete: function() {
+                queue.shift();
+                setTimeout(doAlert, 500);
+            }
+        });
+    }
+    function getAnimatedLetter(str) {
+        var animation = settings.FontAnimate;
+        animation = animation.substring(0, 1).toLowerCase() + animation.substring(1);
+
+        var arrStr = str.toString().split("");
+        return $.map(arrStr, function (s) {
+            return (s == " " || s == "&nbsp;") ? "" : "<span class='animated-letter " + animation + "'>" + s + "</span>";
+        }).join("");
+    }
+    function clearQueueDonateID() {
+        queueDonateID = null;
+        setTimeout(clearQueueDonateID, clearQueueInterval);
+    }
+</script>
+
+<div id="divAlert" align="center" style="font-family: 'Open Sans'; position: relative; display: none;">
+    <div id="wrap" style="display: table;">
+        <div style="display: table-row;">
+            <div id="divImage" style="background-image: url(https://payment.ecpay.com.tw/Upload/Broadcaster/3092688/alertImg_20210331032422.gif);"></div>
+        </div>
+        <div style="display: table-row;">
+            <div style="display: table-cell; padding: 20px; text-align: center;">
+                <div id="divAlertMsg" style="font-size: 36px; font-weight: 800; color: #d48e26; text-align: center;">
+                    
+                </div>
+                <div id="divUserMsg" style="font-size: 28px; font-weight: 600; color: #d0d426; text-align: center;">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
