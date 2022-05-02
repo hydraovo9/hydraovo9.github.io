@@ -3,6 +3,19 @@ const EXCHANGE_RATE = 15
   { 
     price: 100 * EXCHANGE_RATE,
     colors: {
+      contentBg: 'rgba(255,255,30,1)',
+      headerBg: 'rgba(255,179,0,1)',
+      header: 'rgba(255,255,255,1)',
+      authorName: 'rgba(255,255,255,0.701961)',
+      time: 'rgba(255,255,255,0.501961)',
+      content: 'rgba(255,255,255,1)',
+      iconImg: 'https://i.imgur.com/wK5C5uZ.gif'
+    },
+    pinTime: 80
+  },
+  { 
+    price: 75 * EXCHANGE_RATE,
+    colors: {
       contentBg: 'rgba(230,33,23,1)',
       headerBg: 'rgba(208,0,0,1)',
       header: 'rgba(255,255,255,1)',
