@@ -9,7 +9,7 @@ const EXCHANGE_RATE = 15
       authorName: 'rgba(255,255,255,0.701961)',
       time: 'rgba(255,255,255,0.501961)',
       content: 'rgba(255,255,255,1)',
-      iconImg: 'https://cdn.discordapp.com/emojis/828907965951508480.png'
+      iconImg: 'https://cdn.discordapp.com/emojis/969990627511140494.gif'
     },
     pinTime: 60
   },
