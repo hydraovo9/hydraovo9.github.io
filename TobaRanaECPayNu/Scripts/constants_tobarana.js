@@ -9,7 +9,7 @@ const EXCHANGE_RATE = 15
       authorName: 'rgba(255,255,255,0.701961)',
       time: 'rgba(255,255,255,0.501961)',
       content: 'rgba(255,255,255,1)',
-      iconImg: 'https://i.imgur.com/wK5C5uZ.gif'
+      iconImg: 'https://i.imgur.com/2ruMdRc.gif'
     },
     pinTime: 60
   },
