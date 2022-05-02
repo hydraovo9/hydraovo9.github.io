@@ -1,6 +1,19 @@
 const EXCHANGE_RATE = 15
  const PRICE_CONFIGS = [
   { 
+    price: 10000,
+    colors: {
+      contentBg: 'rgba(255,23,70,1)',
+      headerBg: 'rgba(208,0,0,1)',
+      header: 'rgba(255,255,255,1)',
+      authorName: 'rgba(255,255,255,0.701961)',
+      time: 'rgba(255,255,255,0.501961)',
+      content: 'rgba(255,255,255,1)',
+      iconImg: 'https://i.imgur.com/gpR0gyt.gif'
+    },
+    pinTime: 60
+  },
+  { 
     price: 100 * EXCHANGE_RATE,
     colors: {
       contentBg: 'rgba(230,33,23,1)',
