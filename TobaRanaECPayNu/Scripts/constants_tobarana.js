@@ -9,7 +9,7 @@ const EXCHANGE_RATE = 15
       authorName: 'rgba(255,255,255,0.701961)',
       time: 'rgba(255,255,255,0.501961)',
       content: 'rgba(255,255,255,1)',
-      iconImg: 'https://i.imgur.com/2ruMdRc.gif'
+      iconImg: 'https://i.imgur.com/fs7cLE5.gif'
     },
     pinTime: 60
   },
@@ -35,7 +35,7 @@ const EXCHANGE_RATE = 15
       authorName: 'rgba(255,255,255,0.701961)',
       time: 'rgba(255,255,255,0.501961)',
       content: 'rgba(255,255,255,0.87451)',
-      iconImg: 'https://cdn.discordapp.com/emojis/806074765881770005.png'
+      iconImg: 'https://i.imgur.com/mAGHbEw.gif'
     },
     pinTime: 10
   },
@@ -48,7 +48,7 @@ const EXCHANGE_RATE = 15
       authorName: 'rgba(0,0,0,0.541176)',
       time: 'rgba(0,0,0,0.501961)',
       content: 'rgba(0,0,0,0.87451)',
-      iconImg: 'https://cdn.discordapp.com/emojis/805591240921972758.png'
+      iconImg: 'https://i.imgur.com/jIPyYvr.gif'
     },
     pinTime: 5
   },
@@ -61,7 +61,7 @@ const EXCHANGE_RATE = 15
       authorName: 'rgba(0,0,0,0.541176)',
       time: 'rgba(0,0,0,0.501961)',
       content: 'rgba(0,0,0,1)',
-      iconImg: 'https://cdn.discordapp.com/emojis/805623841052295168.png'
+      iconImg: 'https://i.imgur.com/6obHqbt.gif'
     },
     pinTime: 2
   },
@@ -87,7 +87,7 @@ const EXCHANGE_RATE = 15
       authorName: 'rgba(255,255,255,0.701961)',
       time: 'rgba(255,255,255,0.501961)',
       content: 'rgba(255,255,255,1)',
-      iconImg: 'https://cdn.discordapp.com/emojis/805591672171790336.png'
+      iconImg: 'https://i.imgur.com/HzZ1v64.png'
     },
     pinTime: 0
   }
