@@ -43,9 +43,9 @@ const EXCHANGE_RATE = 15
     price: 520,
     colors: {
       contentBg: 'rgba(255,248,0,1)',
-      headerBg: 'rgba(230,81,0,1)',
+      headerBg: 'rgba(211,12,200,1)',
       header: 'rgba(255,255,255,0.87451)',
-      authorName: 'rgba(255,255,255,0.701961)',
+      authorName: 'rgba(0,0,0,0.701961)',
       time: 'rgba(255,255,255,0.501961)',
       content: 'rgba(255,255,255,0.87451)',
       iconImg: 'https://i.imgur.com/6UvwPrA.gif'
