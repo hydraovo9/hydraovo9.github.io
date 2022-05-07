@@ -55,12 +55,12 @@ const EXCHANGE_RATE = 15
   { 
     price: 520,
     colors: {
-      contentBg: 'rgba(254,214,214,1)',
-      headerBg: 'rgba(240,158,204,1)',
+      contentBg: 'rgba(249,208,222,1)',
+      headerBg: 'rgba(228,114,116,1)',
       header: 'rgba(0,0,0,0.87451)',
       authorName: 'rgba(0,0,0,0.701961)',
       time: 'rgba(255,255,255,0.501961)',
-      content: 'rgba(0,0,0.87451)',
+      content: 'rgba(0,0,0.1)',
       iconImg: 'https://static.wikia.nocookie.net/youtube/images/5/5b/Get_rickrolled.gif/revision/latest?cb=20220111080521'
     },
     pinTime: 11
