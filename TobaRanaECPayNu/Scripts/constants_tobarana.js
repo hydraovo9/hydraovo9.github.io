@@ -61,7 +61,7 @@ const EXCHANGE_RATE = 15
       authorName: 'rgba(0,0,0,0.701961)',
       time: 'rgba(255,255,255,0.501961)',
       content: 'rgba(0,0,0.1)',
-      iconImg: 'https://static.wikia.nocookie.net/youtube/images/5/5b/Get_rickrolled.gif'
+      iconImg: 'https://c.tenor.com/VFFJ8Ei3C2IAAAAM/rickroll-rick.gif'
     },
     pinTime: 11
   },
