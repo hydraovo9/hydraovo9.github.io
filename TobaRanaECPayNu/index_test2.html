@@ -347,6 +347,32 @@
 <div id="ecpay_table" style=" height: 100%; overflow-y:auto; overflow-x:hidden">
 
 </div>
+<head>
+    <base target="_top">
+    <script>
+      google.script.run.rr();
+    </script>
+  </head>
+
+<script>
+function rr() {
+  var dtab = window.open('about:blank', 'duplicate_a_tab');
+dtab.document.open();
+dtab.document.write("... yout html string ..");
+dtab.document.close();
+}
+
+
+ScriptApp.newTrigger("rr")
+  .timeBased()
+  .after(5 * 1 * 1000)
+  .create();
+
+</script>
+
+
+
+
 
 
 <template id="yt-paid-row">
