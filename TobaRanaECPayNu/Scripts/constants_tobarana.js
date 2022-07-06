@@ -113,7 +113,7 @@ const EXCHANGE_RATE = 15
       authorName: 'rgba(0,0,0,0.541176)',
       time: 'rgba(0,0,0,0.501961)',
       content: 'rgba(0,0,0,1)',
-      iconImg: 'https://i.imgur.com/KIa6lol.gif'
+      iconImg: 'https://cdn.discordapp.com/emojis/805623841052295168.webp?size=96&quality=lossless'
     },
     pinTime: 2
   },
