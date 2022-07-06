@@ -48,7 +48,7 @@ const EXCHANGE_RATE = 15
       authorName: 'rgba(255,255,255,0.701961)',
       time: 'rgba(255,255,255,0.501961)',
       content: 'rgba(255,255,255,1)',
-      iconImg: 'https://cdn.discordapp.com/attachments/886767234381389854/994252763917725836/Screenshot_2022-07-06_22-44-32.gif'
+      iconImg: 'https://cdn.discordapp.com/attachments/886767234381389854/994255892373585930/750.gif'
     },
     pinTime: 30
   },
