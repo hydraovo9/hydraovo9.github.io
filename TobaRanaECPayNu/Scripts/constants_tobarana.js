@@ -7,7 +7,7 @@ const EXCHANGE_RATE = 15
       headerBg: 'rgba(10,45,35,1)',
       header: 'rgba(255,200,70,1)',
       authorName: 'rgba(255,250,220,0.7)',
-      time: 'rgba(255,255,255,0.701961)',
+      time: 'rgba(255,255,255,0.501961)',
       content: 'rgba(255,244,150,1)',
       iconImg: 'https://cdn.discordapp.com/attachments/886767234381389854/994235591837364224/money.gif'
     },
@@ -22,7 +22,7 @@ const EXCHANGE_RATE = 15
       authorName: 'rgba(255,255,255,0.701961)',
       time: 'rgba(255,255,255,0.501961)',
       content: 'rgba(255,255,255,1)',
-      iconImg: 'https://i.imgur.com/gpR0gyt.gif'
+      iconImg: 'https://cdn.discordapp.com/attachments/886767234381389854/994249675718787142/ezgif.com-gif-maker_3.gif'
     },
     pinTime: 60
   },
