@@ -3,13 +3,13 @@ const EXCHANGE_RATE = 15
   { 
     price: 10000,
     colors: {
-      contentBg: 'rgba(255,255,43,1)',
-      headerBg: 'rgba(254,225,1,1)',
-      header: 'rgba(0,0,0,1)',
-      authorName: 'rgba(0,0,0,0.701961)',
-      time: 'rgba(255,255,255,0.501961)',
-      content: 'rgba(0,0,0,1)',
-      iconImg: 'https://i.imgur.com/PQyKHk6.gif'
+      contentBg: 'rgba(22,60,40,1)',
+      headerBg: 'rgba(10,45,35,1)',
+      header: 'rgba(255,200,70,1)',
+      authorName: 'rgba(255,250,220,0.7)',
+      time: 'rgba(255,255,255,0.701961)',
+      content: 'rgba(255,244,150,1)',
+      iconImg: 'https://cdn.discordapp.com/attachments/886767234381389854/994235591837364224/money.gif'
     },
     pinTime: 65
   },
