@@ -87,7 +87,7 @@ const EXCHANGE_RATE = 15
       authorName: 'rgba(255,255,255,0.701961)',
       time: 'rgba(255,255,255,0.501961)',
       content: 'rgba(255,255,255,0.87451)',
-      iconImg: 'https://i.imgur.com/6UvwPrA.gif'
+      iconImg: 'https://cdn.discordapp.com/attachments/886767234381389854/994254301784449074/owly-fast.gif'
     },
     pinTime: 10
   },
@@ -100,7 +100,7 @@ const EXCHANGE_RATE = 15
       authorName: 'rgba(0,0,0,0.541176)',
       time: 'rgba(0,0,0,0.501961)',
       content: 'rgba(0,0,0,0.87451)',
-      iconImg: 'https://cdn.discordapp.com/attachments/970720860019232778/970724356290412614/ezgif.com-gif-maker_49.gif'
+      iconImg: 'https://cdn.discordapp.com/attachments/886767234381389854/994254418935558144/FULAD1.jpg'
     },
     pinTime: 5
   },
