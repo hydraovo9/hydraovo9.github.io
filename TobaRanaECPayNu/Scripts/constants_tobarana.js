@@ -74,7 +74,7 @@ const EXCHANGE_RATE = 15
       authorName: 'rgba(0,0,0,0.701961)',
       time: 'rgba(255,255,255,0.501961)',
       content: 'rgba(0,0,0.1)',
-      iconImg: 'https://c.tenor.com/VFFJ8Ei3C2IAAAAM/rickroll-rick.gif'
+      iconImg: 'https://cdn.discordapp.com/attachments/941484136638607390/994252072214085804/ezgif.com-gif-maker_4.gif'
     },
     pinTime: 11
   },
