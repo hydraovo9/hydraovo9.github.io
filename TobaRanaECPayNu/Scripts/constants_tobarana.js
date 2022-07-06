@@ -48,7 +48,7 @@ const EXCHANGE_RATE = 15
       authorName: 'rgba(255,255,255,0.701961)',
       time: 'rgba(255,255,255,0.501961)',
       content: 'rgba(255,255,255,1)',
-      iconImg: 'https://cdn.discordapp.com/emojis/969990627511140494.gif'
+      iconImg: 'https://cdn.discordapp.com/attachments/886767234381389854/994252763917725836/Screenshot_2022-07-06_22-44-32.gif'
     },
     pinTime: 30
   },
@@ -126,7 +126,7 @@ const EXCHANGE_RATE = 15
       authorName: 'rgba(0,0,0,0.701961)',
       time: 'rgba(0,0,0,0.501961)',
       content: 'rgba(0,0,0,1)',
-      iconImg: 'https://cdn.discordapp.com/attachments/969045209608511498/970641281271365673/ainomori.png'
+      iconImg: 'https://cdn.discordapp.com/attachments/886767234381389854/994253105065627658/ainomori-heart-150px--.png'
     },
     pinTime: 0
   },
